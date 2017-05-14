@@ -1,0 +1,79 @@
+*{
+	box-sizing: border-box;
+
+}
+.toggle{
+	visibility: hidden;
+
+}
+#hidden{
+	float: right;
+
+}
+.show{
+	visibility: visible;
+}
+
+	#showResult{
+		clear: both;
+	}
+	.image{
+		cursor: pointer;
+
+	}
+#logoImg {
+	/*background-image:url("pics/logo3.jpg");*/
+	height:100px;
+	width:100px;
+	/*margin:auto;*/
+	float:right;
+	background-repeat:no-repeat;
+}
+#userSubmit{
+	background-color: blue;
+	color:white;
+	width:150px;
+	height:50px;
+	margin-bottom: 20px;
+
+}
+body{
+	background-image: url("pics/bankBG5.jpg");
+}
+h1{
+	text-align: center;
+	color: blue;
+}
+form{
+	margin-top: 50px; 
+	margin-bottom: 20px;
+	clear: both;
+	border-style: double;
+	padding: 20px;
+	text-align: center;
+
+}
+input,select,label{
+	height:35px;
+	width:150px;
+	text-align: center;
+	/*margin: 5px;*/
+}
+button{
+	 display: block;
+	 margin: auto;
+    margin-top: 20px;
+
+    width: 40%;
+    margin-bottom: 10px;
+}
+.search{
+	font-weight:bold;
+	font-size: 20px;
+	color: blue;
+	margin-right: 30px;
+}
+.hide{
+
+	visibility: hidden;
+}
