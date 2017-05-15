@@ -14,6 +14,7 @@ const {UserDetail} = require('./models');
 //const {ActTypeDetail} = require('./models');
 const app = express();
 app.use(bodyParser.json());
+app.use(express.static(__dirname + '/public'));
 
 
 // GET requests to /restaurants => return 10 restaurants
