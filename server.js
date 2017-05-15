@@ -19,7 +19,7 @@ app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 
 app.get('/', function(request, response) {
-  response.render('views/index', { title: 'ejs' })
+  response.render('public/index', { title: 'ejs' })
 
 });
 // GET requests to /restaurants => return 10 restaurants
