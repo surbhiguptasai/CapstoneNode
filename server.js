@@ -16,7 +16,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(express.static(__dirname + 'public'));
 app.engine('.html', require('ejs').__express);
-app.set('views', __dirname + '/views');
+app.set('views', __dirname + '/');
 app.set('view engine', 'html');
 
 app.get('/', function(request, response) {
