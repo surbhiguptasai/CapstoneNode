@@ -15,6 +15,8 @@ const {UserDetail} = require('./models');
 const app = express();
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/pics'));
+app.use('pics',express.static(path.join(__dirname, '/pics')));
+
 app.engine('.html', require('ejs').__express);
 app.set('views', __dirname + '/');
 app.set('view engine', 'html');
