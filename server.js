@@ -15,9 +15,12 @@ const {UserDetail} = require('./models');
 const app = express();
 app.use(bodyParser.json());
 app.use(express.static(__dirname + 'public'));
+app.engine('html', require('ejs').renderFile);
+app.set('view engine', 'html');
 
 app.get('/', function(request, response) {
-  response.render('index.html')
+  response.render('views/index', { title: 'ejs' })
+
 });
 // GET requests to /restaurants => return 10 restaurants
 app.get('/users', (req, res) => {
