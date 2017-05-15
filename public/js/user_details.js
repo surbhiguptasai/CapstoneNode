@@ -63,7 +63,7 @@ $("#download-json").click(function(){
 }
 function getAllUsers(callback) {
 	var numRecords=10;
-	var url="http://localhost:8080/users";
+	var url="https://capstone-node.herokuapp.com/users";
 
     var accountCode=$("#accountCode").val();
      var acttype=$("#acttype").val();
@@ -112,7 +112,7 @@ function showActtype(data){
 	})
 }
 function populateActType() {
-	var url="http://localhost:8080/distinct?distinct=acttype";
+	var url="https://capstone-node.herokuapp.com/distinct?distinct=acttype";
 	 var queryString = {};
 
 	$.getJSON(url,queryString,showActtype);
@@ -127,7 +127,7 @@ function showGentype(data){
 	})
 }
 function populateGenType() {
-	var url="http://localhost:8080/distinct?distinct=gender";
+	var url="https://capstone-node.herokuapp.com/distinct?distinct=gender";
 	 var queryString = {};
 
 	$.getJSON(url,queryString,showGentype);
@@ -142,7 +142,7 @@ function showCitytype(data){
 	})
 }
 function populateCityType() {
-	var url="http://localhost:8080/distinct?distinct=address.city";
+	var url="https://capstone-node.herokuapp.com/distinct?distinct=address.city";
 	 var queryString = {};
 
 	$.getJSON(url,queryString,showCitytype);
