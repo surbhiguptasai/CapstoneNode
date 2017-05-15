@@ -16,7 +16,9 @@ const app = express();
 app.use(bodyParser.json());
 app.use(express.static(__dirname + 'public'));
 
-
+app.get('/', function(request, response) {
+  response.render('index.html')
+});
 // GET requests to /restaurants => return 10 restaurants
 app.get('/users', (req, res) => {
   //console.log("req.query"+JSON.stringify(req.query));
