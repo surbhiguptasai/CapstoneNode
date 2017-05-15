@@ -22,7 +22,7 @@
 
 	}
 #logoImg {
-	/*background-image:url("pics/logo3.jpg");*/
+	/*background-image:url("img/logo3.jpg");*/
 	height:100px;
 	width:100px;
 	/*margin:auto;*/
@@ -38,7 +38,7 @@
 
 }
 body{
-	background-image: url("pics/bankBG5.jpg");
+	background-image: url("../img/bankBG5.jpg");
 }
 h1{
 	text-align: center;

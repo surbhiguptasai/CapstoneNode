@@ -14,17 +14,15 @@ const {UserDetail} = require('./models');
 //const {ActTypeDetail} = require('./models');
 const app = express();
 app.use(bodyParser.json());
-app.use(express.static(__dirname + 'pics'));
+app.use(express.static(__dirname + '/public'));
 //app.use('pics',express.static(path.join(__dirname, '/pics')));
 
-app.engine('.html', require('ejs').__express);
-app.set('views', __dirname + '/');
-app.set('view engine', 'html');
 
-app.get('/', function(request, response) {
-  response.render('index', { title: 'ejs' })
 
-});
+// app.get('/', function(request, response) {
+//   response.render('index', { title: 'ejs' })
+
+// });
 // GET requests to /restaurants => return 10 restaurants
 app.get('/users', (req, res) => {
   //console.log("req.query"+JSON.stringify(req.query));
@@ -192,33 +190,30 @@ app.get('/distinct', (req, res) => {
 // });
 
 
-// app.post('/restaurants', (req, res) => {
+app.post('/users', (req, res) => {
+  const requiredFields = ['acttype', 'ssn', 'name','totalAmount'];
+  for (let i=0; i<requiredFields.length; i++) {
+    const field = requiredFields[i];
+    if (!(field in req.body)) {
+      const message = `Missing \`${field}\` in request body`
+      console.error(message);
+      return res.status(400).send(message);
+    }
+  }
 
-//   const requiredFields = ['name', 'borough', 'cuisine'];
-//   for (let i=0; i<requiredFields.length; i++) {
-//     const field = requiredFields[i];
-//     if (!(field in req.body)) {
-//       const message = `Missing \`${field}\` in request body`
-//       console.error(message);
-//       return res.status(400).send(message);
-//     }
-//   }
+  BlogPost
+    .create({
+      name: req.body.name,
+      acttype: req.body.acttype,
+      totalAmount: req.body.totalAmount
+    })
+    .then(userDetail => res.status(201).json(userDetail.apiRepr()))
+    .catch(err => {
+        console.error(err);
+        res.status(500).json({error: 'Something went wrong'});
+    });
 
-//   Restaurant
-//     .create({
-//       name: req.body.name,
-//       borough: req.body.borough,
-//       cuisine: req.body.cuisine,
-//       grades: req.body.grades,
-//       address: req.body.address})
-//     .then(
-//       restaurant => res.status(201).json(restaurant.apiRepr()))
-//     .catch(err => {
-//       console.error(err);
-//       res.status(500).json({message: 'Internal server error'});
-//     });
-// });
-
+});
 
 // app.put('/restaurants/:id', (req, res) => {
 //   // ensure that the id in the request path and the one in request body match
