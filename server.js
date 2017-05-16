@@ -201,11 +201,12 @@ app.post('/users', (req, res) => {
     }
   }
 
-  BlogPost
+  UserDetail
     .create({
       name: req.body.name,
       acttype: req.body.acttype,
-      totalAmount: req.body.totalAmount
+      totalAmount: req.body.totalAmount,
+      ssn:req.body.ssn
     })
     .then(userDetail => res.status(201).json(userDetail.apiRepr()))
     .catch(err => {
