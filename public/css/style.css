@@ -35,8 +35,9 @@
 	width:150px;
 	height:50px;
 	margin-bottom: 20px;
-
+	
 }
+
 body{
 	background-image: url("../img/bankBG5.jpg");
 }
@@ -60,7 +61,7 @@ input,select,label{
 	/*margin: 5px;*/
 }
 button{
-	 display: block;
+	 display: inline-block;
 	 margin: auto;
     margin-top: 20px;
 
@@ -76,4 +77,11 @@ button{
 .hide{
 
 	visibility: hidden;
+}
+#add-row{
+	height: 30px;
+	width: 150px;
+	background-color: blue;
+	margin-bottom: 0;
+	color: white;
 }

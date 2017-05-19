@@ -11,37 +11,18 @@ mongoose.set('debug', true);
 // app like PORT and DATABASE_URL
 const {PORT, DATABASE_URL} = require('./config');
 const {UserDetail} = require('./models');
-//const {ActTypeDetail} = require('./models');
 const app = express();
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/public'));
-//app.use('pics',express.static(path.join(__dirname, '/pics')));
 
-
-
-// app.get('/', function(request, response) {
-//   response.render('index', { title: 'ejs' })
-
-// });
-// GET requests to /restaurants => return 10 restaurants
 app.get('/users', (req, res) => {
-  //console.log("req.query"+JSON.stringify(req.query));
-  //var queryString=JSON.stringify(req.query);
   console.log("req.query"+JSON.stringify(req.query));
-  
-//console.log("UserDetail is "+UserDetail);
-    // var numofRecords = req.param('numRecords');
-    // console.log("numofRecords"+numofRecords);
-    //console.log("req.query.accountID"+req.query.accountID);
- 
+
   UserDetail
     .find(
       req.query
 
       )
-    // we're limiting because restaurants db has > 25,000
-    // documents, and that's too much to process/return
-   //.limit(100)
     // `exec` returns a promise
     .exec()
     // success callback: for each restaurant we got back, we'll
@@ -59,16 +40,13 @@ app.get('/users', (req, res) => {
         res.status(500).json({message: 'Internal server error'});
     });
 });
+
 app.get('/distinct', (req, res) => {
   console.log("req.params.distinct "+req.query.distinct);
 
-   
   UserDetail.distinct(
       req.query.distinct
       )
-    // we're limiting because restaurants db has > 25,000
-    // documents, and that's too much to process/return
-    //.limit(10)
     // `exec` returns a promise
     .exec()
     // success callback: for each restaurant we got back, we'll
@@ -87,107 +65,19 @@ app.get('/distinct', (req, res) => {
     });
 });
 
-
-// app.get('/distinct', (req, res) => {
-//   console.log("req.params.distinct "+req.query.distinct);
-
-   
-//   UserDetail.distinct(
-//       req.query.distinct
-//       )
-//     // we're limiting because restaurants db has > 25,000
-//     // documents, and that's too much to process/return
-//     //.limit(10)
-//     // `exec` returns a promise
-//     .exec()
-//     // success callback: for each restaurant we got back, we'll
-//     // call the `.apiRepr` instance method we've created in
-//     // models.js in order to only expose the data we want the API return.
-//     .then(gender => {
-//       console.log("gender is "+gentype);
-//       res.json({
-//       gender
-//       });
-//     })
-//     .catch(
-//       err => {
-//         console.error(err);
-//         res.status(500).json({message: 'Internal server error'});
-//     });
-// });
-
-// app.get('/distinct', (req, res) => {
-//   console.log("req.params.distinct "+req.query.distinct);
-
-   
-//   UserDetail.distinct(
-//       req.query.distinct
-//       )
-//     // we're limiting because restaurants db has > 25,000
-//     // documents, and that's too much to process/return
-//     //.limit(10)
-//     // `exec` returns a promise
-//     .exec()
-//     // success callback: for each restaurant we got back, we'll
-//     // call the `.apiRepr` instance method we've created in
-//     // models.js in order to only expose the data we want the API return.
-//     .then(city => {
-//       console.log("city is "+city);
-//       res.json({
-//       city
-//       });
-//     })
-//     .catch(
-//       err => {
-//         console.error(err);
-//         res.status(500).json({message: 'Internal server error'});
-//     });
-// });
-
-// app.get('/users/:accountId', (req, res) => {
-//   UserDetail
-//     .find(
-//       {
-       
-//        // totalAmount : 345600 
-//         //"name.firstName" : "Tom"
-//         "accountID": req.params.accountId
-//       }
-//       )
-//     // we're limiting because restaurants db has > 25,000
-//     // documents, and that's too much to process/return
-//     //.limit(10)
-//     // `exec` returns a promise
-//     .exec()
-//     // success callback: for each restaurant we got back, we'll
-//     // call the `.apiRepr` instance method we've created in
-//     // models.js in order to only expose the data we want the API return.
-//     .then(users => {
-//       res.json({
-//         users: users.map(
-//           (user) => user.apiRepr())
-//       });
-//     })
-//     .catch(
-//       err => {
-//         console.error(err);
-//         res.status(500).json({message: 'Internal server error'});
-//     });
-// });
-
 // can also request by ID
-// app.get('/restaurants/:id', (req, res) => {
-//   Restaurant
-//     // this is a convenience method Mongoose provides for searching
-//     // by the object _id property
-//     .findById(req.params.id)
-//     .exec()
-//     .then(restaurant =>res.json(restaurant.apiRepr()))
-//     .catch(err => {
-//       console.error(err);
-//         res.status(500).json({message: 'Internal server error'})
-//     });
-// });
+app.get('/users/:id', (req, res) => {
+  UserDetail
+    // this is a convenience method Mongoose provides for searching
+    // by the object _id property
+    .findById(req.params.id)
+    .exec()
+    .then(user =>res.json(user.apiRepr()))
+    .catch(err => {
+      console.error(err);
+        res.status(500).json({message: 'Internal server error'})
+    });
+});
 
 
 app.post('/users', (req, res) => {
@@ -216,43 +106,50 @@ app.post('/users', (req, res) => {
 
 });
 
-// app.put('/restaurants/:id', (req, res) => {
-//   // ensure that the id in the request path and the one in request body match
-//   if (!(req.params.id && req.body.id && req.params.id === req.body.id)) {
-//     const message = (
-//       `Request path id (${req.params.id}) and request body id ` +
-//       `(${req.body.id}) must match`);
-//     console.error(message);
-//     res.status(400).json({message: message});
-//   }
+app.put('/users/:id', (req, res) => {
+  // ensure that the id in the request path and the one in request body match
+  if (!(req.params.id && req.body.id && req.params.id === req.body.id)) {
+    const message = (
+      `Request path id (${req.params.id}) and request body id ` +
+      `(${req.body.id}) must match`);
+    console.error(message);
+    res.status(400).json({message: message});
+  }
 
-//   // we only support a subset of fields being updateable.
-//   // if the user sent over any of the updatableFields, we udpate those values
-//   // in document
-//   const toUpdate = {};
-//   const updateableFields = ['name', 'borough', 'cuisine', 'address'];
+  // we only support a subset of fields being updateable.
+  // if the user sent over any of the updatableFields, we udpate those values
+  // in document
+  const toUpdate = {};
+  const updateableFields = ['acttype', 'ssn', 'name','totalAmount'];
 
-//   updateableFields.forEach(field => {
-//     if (field in req.body) {
-//       toUpdate[field] = req.body[field];
-//     }
-//   });
+  updateableFields.forEach(field => {
+    if (field in req.body) {
+      toUpdate[field] = req.body[field];
+    }
+  });
 
-//   Restaurant
-//     // all key/value pairs in toUpdate will be updated -- that's what `$set` does
-//     .findByIdAndUpdate(req.params.id, {$set: toUpdate})
-//     .exec()
-//     .then(restaurant => res.status(204).end())
-//     .catch(err => res.status(500).json({message: 'Internal server error'}));
-// });
+  UserDetail
+    // all key/value pairs in toUpdate will be updated -- that's what `$set` does
+    .findByIdAndUpdate(req.params.id, {$set: toUpdate}, {new: true})
+    .exec()
+    .then(updateData => res.status(201).json(updateData.apiRepr()))
+    .catch(err => res.status(500).json({message: 'Internal server error'}));
+});
 
-// app.delete('/restaurants/:id', (req, res) => {
-//   Restaurant
-//     .findByIdAndRemove(req.params.id)
-//     .exec()
-//     .then(restaurant => res.status(204).end())
-//     .catch(err => res.status(500).json({message: 'Internal server error'}));
-// });
+
+app.delete('/users/:id', (req, res) => {
+  UserDetail
+    .findByIdAndRemove(req.params.id+"")
+    .exec()
+    .then(() => {
+      console.log(`Deleted users  with id \`${req.params.id}\``);
+      res.status(204).end();
+    })
+    .catch(err => {
+      console.error(err);
+      res.status(500).json({error: 'something went terribly wrong'});
+    });
+});
 
 // catch-all endpoint if client makes request to non-existent endpoint
 app.use('*', function(req, res) {
