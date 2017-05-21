@@ -1,20 +1,73 @@
 const bodyParser = require('body-parser');
 const express = require('express');
 const mongoose = require('mongoose');
+const unirest = require('unirest');
 
 // Mongoose internally uses a promise-like object,
 // but its better to make Mongoose use built in es6 promises
 mongoose.Promise = global.Promise;
 mongoose.set('debug', true);
-
+const swaggerJSDoc = require('swagger-jsdoc');
 // config.js is where we control constants for entire
 // app like PORT and DATABASE_URL
 const {PORT, DATABASE_URL} = require('./config');
 const {UserDetail} = require('./models');
 const app = express();
+const swaggerDefinition = {
+  info: {
+    title: 'Node Swagger API',
+    version: '1.0.0',
+    description: 'Demonstrating how to describe a RESTful API with Swagger',
+  },
+  host: 'localhost:8080',
+  basePath: '/',
+};
+
+// options for the swagger docs
+const options = {
+  // import swaggerDefinitions
+  swaggerDefinition: swaggerDefinition,
+  // path to the API docs
+  apis: ['./routes/*.js'],
+};
+
+// initialize swagger-jsdoc
+const swaggerSpec = swaggerJSDoc(options);
+
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/public'));
 
+app.get('/swagger.json', function(req, res) {
+  res.setHeader('Content-Type', 'application/json');
+  res.send(swaggerSpec);
+});
+
+/**
+ * @swagger
+ * definition:
+ *   users:
+ *     properties:
+ *       name:
+ *         type: string
+ *       accountCode:
+ *         type: string
+ */
+
+/**
+ * @swagger
+ * /api/users:
+ *   get:
+ *     tags:
+ *       - Users
+ *     description: Returns all users
+ *     produces:
+ *       - application/json
+ *     responses:
+ *       200:
+ *         description: An array of users
+ *         schema:
+ *           $ref: '#/definition/users'
+ */
 app.get('/users', (req, res) => {
   console.log("req.query"+JSON.stringify(req.query));
 
@@ -64,9 +117,29 @@ app.get('/distinct', (req, res) => {
         res.status(500).json({message: 'Internal server error'});
     });
 });
-
-// can also request by ID
+/**
+ * @swagger
+ * /api/users/{id}:
+ *   get:
+ *     tags:
+ *       - Users
+ *     description: Returns a single user
+ *     produces:
+ *       - application/json
+ *     parameters:
+ *       - name: id
+ *         description: User's id
+ *         in: path
+ *         required: true
+ *         type: integer
+ *     responses:
+ *       200:
+ *         description: A single user
+ *         schema:
+ *           $ref: '#/definitions/user'
+ */
 app.get('/users/:id', (req, res) => {
+  console.log("req.params.id is *************"+req.params.id);
   UserDetail
     // this is a convenience method Mongoose provides for searching
     // by the object _id property
@@ -81,7 +154,8 @@ app.get('/users/:id', (req, res) => {
 
 
 app.post('/users', (req, res) => {
-  const requiredFields = ['acttype', 'ssn', 'name','totalAmount'];
+  //const requiredFields = ['gender','username','accountCode','branchName','acttype','email','address','phone','actopendate','ssn', 'name','totalAmount'];
+  const requiredFields = ['accountCode','acttype','ssn', 'name','totalAmount'];
   for (let i=0; i<requiredFields.length; i++) {
     const field = requiredFields[i];
     if (!(field in req.body)) {
@@ -96,7 +170,17 @@ app.post('/users', (req, res) => {
       name: req.body.name,
       acttype: req.body.acttype,
       totalAmount: req.body.totalAmount,
-      ssn:req.body.ssn
+      ssn:req.body.ssn,
+      gender: req.body.gender,
+      username: req.body.username,
+      accountCode: req.body.accountCode,
+      branchName: req.body.branchName,
+       email: req.body.email,
+      address: req.body.address,
+      phone: req.body.phone,
+      actopendate: req.body.actopendate
+
+
     })
     .then(userDetail => res.status(201).json(userDetail.apiRepr()))
     .catch(err => {
@@ -120,7 +204,7 @@ app.put('/users/:id', (req, res) => {
   // if the user sent over any of the updatableFields, we udpate those values
   // in document
   const toUpdate = {};
-  const updateableFields = ['acttype', 'ssn', 'name','totalAmount'];
+  const updateableFields = ['acttype', 'ssn','totalAmount'];
 
   updateableFields.forEach(field => {
     if (field in req.body) {
@@ -138,8 +222,9 @@ app.put('/users/:id', (req, res) => {
 
 
 app.delete('/users/:id', (req, res) => {
+  console.log("Delete User called*****************88");
   UserDetail
-    .findByIdAndRemove(req.params.id+"")
+    .findByIdAndRemove(req.params.id)
     .exec()
     .then(() => {
       console.log(`Deleted users  with id \`${req.params.id}\``);
