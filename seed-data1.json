@@ -8,7 +8,7 @@
     "username": "wallace",
     "accountCode": "CHAS3295965468688632",
     "branchName": "Seymour",
-    "totalAmount": "$1,022.16",
+    "totalAmount": "1,022.16",
     "email": "wallacewilcox@cuizine.com",
     "address": {
       "street": "Grace Court",
@@ -32,7 +32,7 @@
     "username": "dora",
     "accountCode": "CHAS3370750376996606",
     "branchName": "Outlook",
-    "totalAmount": "$1,993.09",
+    "totalAmount": "1,993.09",
     "email": "dorachurch@cuizine.com",
     "address": {
       "street": "Gotham Avenue",
@@ -56,7 +56,7 @@
     "username": "alston",
     "accountCode": "CHAS2583108542727187",
     "branchName": "Neibert",
-    "totalAmount": "$2,897.45",
+    "totalAmount": "2,897.45",
     "email": "alstonmyers@cuizine.com",
     "address": {
       "street": "Campus Place",
@@ -80,7 +80,7 @@
     "username": "leanne",
     "accountCode": "CHAS3689534042457722",
     "branchName": "Orick",
-    "totalAmount": "$2,357.35",
+    "totalAmount": "2,357.35",
     "email": "leannecompton@cuizine.com",
     "address": {
       "street": "Irwin Street",
@@ -104,7 +104,7 @@
     "username": "osborn",
     "accountCode": "CHAS2431790715510629",
     "branchName": "Efland",
-    "totalAmount": "$2,590.60",
+    "totalAmount": "2,590.60",
     "email": "osbornkidd@cuizine.com",
     "address": {
       "street": "Vandervoort Avenue",
@@ -128,7 +128,7 @@
     "username": "judith",
     "accountCode": "CHAS2576042307351386",
     "branchName": "Morgandale",
-    "totalAmount": "$2,734.61",
+    "totalAmount": "2,734.61",
     "email": "judithwelch@cuizine.com",
     "address": {
       "street": "Clay Street",
@@ -152,7 +152,7 @@
     "username": "fleming",
     "accountCode": "CHAS2959454590958923",
     "branchName": "Sims",
-    "totalAmount": "$2,774.68",
+    "totalAmount": "2,774.68",
     "email": "flemingtodd@cuizine.com",
     "address": {
       "street": "Ryder Street",
@@ -176,7 +176,7 @@
     "username": "preston",
     "accountCode": "CHAS2510799013326979",
     "branchName": "Bluetown",
-    "totalAmount": "$1,239.11",
+    "totalAmount": "1,239.11",
     "email": "prestonewing@cuizine.com",
     "address": {
       "street": "Elm Avenue",
@@ -200,7 +200,7 @@
     "username": "trevino",
     "accountCode": "CHAS3188013496846970",
     "branchName": "Cucumber",
-    "totalAmount": "$1,185.34",
+    "totalAmount": "1,185.34",
     "email": "trevinorasmussen@cuizine.com",
     "address": {
       "street": "Verona Place",
@@ -224,7 +224,7 @@
     "username": "deirdre",
     "accountCode": "CHAS2976309790465560",
     "branchName": "Dellview",
-    "totalAmount": "$3,712.69",
+    "totalAmount": "3,712.69",
     "email": "deirdreward@cuizine.com",
     "address": {
       "street": "Rogers Avenue",
@@ -248,7 +248,7 @@
     "username": "jennie",
     "accountCode": "CHAS3890105827813774",
     "branchName": "Tecolotito",
-    "totalAmount": "$3,277.98",
+    "totalAmount": "3,277.98",
     "email": "jenniebaird@cuizine.com",
     "address": {
       "street": "Williamsburg Street",
@@ -272,7 +272,7 @@
     "username": "whitfield",
     "accountCode": "CHAS2105082063419966",
     "branchName": "Statenville",
-    "totalAmount": "$3,872.91",
+    "totalAmount": "3,872.91",
     "email": "whitfieldmacdonald@cuizine.com",
     "address": {
       "street": "Pierrepont Place",
@@ -296,7 +296,7 @@
     "username": "lorene",
     "accountCode": "CHAS2474192041148985",
     "branchName": "Glenbrook",
-    "totalAmount": "$1,778.13",
+    "totalAmount": "1,778.13",
     "email": "lorenehayes@cuizine.com",
     "address": {
       "street": "Bayview Place",
@@ -320,7 +320,7 @@
     "username": "yang",
     "accountCode": "CHAS3333202393784411",
     "branchName": "Yonah",
-    "totalAmount": "$2,978.31",
+    "totalAmount": "2,978.31",
     "email": "yangholcomb@cuizine.com",
     "address": {
       "street": "Ovington Court",
@@ -344,7 +344,7 @@
     "username": "brittany",
     "accountCode": "CHAS2546919562909682",
     "branchName": "Barstow",
-    "totalAmount": "$1,195.77",
+    "totalAmount": "1,195.77",
     "email": "brittanycraig@cuizine.com",
     "address": {
       "street": "Merit Court",
@@ -368,7 +368,7 @@
     "username": "debora",
     "accountCode": "CHAS2568943659333080",
     "branchName": "Veyo",
-    "totalAmount": "$2,815.90",
+    "totalAmount": "2,815.90",
     "email": "deboraberry@cuizine.com",
     "address": {
       "street": "Leonora Court",
@@ -392,7 +392,7 @@
     "username": "johnson",
     "accountCode": "CHAS3690856096510788",
     "branchName": "Saddlebrooke",
-    "totalAmount": "$1,304.51",
+    "totalAmount": "1,304.51",
     "email": "johnsonmoran@cuizine.com",
     "address": {
       "street": "Seagate Avenue",
@@ -416,7 +416,7 @@
     "username": "noelle",
     "accountCode": "CHAS2884205684417490",
     "branchName": "Jennings",
-    "totalAmount": "$2,121.95",
+    "totalAmount": "2,121.95",
     "email": "noellewalton@cuizine.com",
     "address": {
       "street": "Bryant Street",
@@ -440,7 +440,7 @@
     "username": "ramsey",
     "accountCode": "CHAS3874119248958306",
     "branchName": "Westerville",
-    "totalAmount": "$2,499.30",
+    "totalAmount": "2,499.30",
     "email": "ramseyprice@cuizine.com",
     "address": {
       "street": "Garden Street",
@@ -464,7 +464,7 @@
     "username": "elnora",
     "accountCode": "CHAS2201241388876750",
     "branchName": "Glenshaw",
-    "totalAmount": "$1,708.28",
+    "totalAmount": "1,708.28",
     "email": "elnorawoodard@cuizine.com",
     "address": {
       "street": "Atkins Avenue",
@@ -488,7 +488,7 @@
     "username": "suarez",
     "accountCode": "CHAS2943128581570197",
     "branchName": "Roderfield",
-    "totalAmount": "$1,222.35",
+    "totalAmount": "1,222.35",
     "email": "suarezpruitt@cuizine.com",
     "address": {
       "street": "Bush Street",
@@ -512,7 +512,7 @@
     "username": "hooper",
     "accountCode": "CHAS3215358821392387",
     "branchName": "Brazos",
-    "totalAmount": "$1,408.94",
+    "totalAmount": "1,408.94",
     "email": "hoopermoses@cuizine.com",
     "address": {
       "street": "Hanson Place",
@@ -536,7 +536,7 @@
     "username": "ferrell",
     "accountCode": "CHAS3973950579256068",
     "branchName": "Rivereno",
-    "totalAmount": "$1,897.36",
+    "totalAmount": "1,897.36",
     "email": "ferrellhurley@cuizine.com",
     "address": {
       "street": "Bokee Court",
@@ -560,7 +560,7 @@
     "username": "hudson",
     "accountCode": "CHAS3559968367387721",
     "branchName": "Mathews",
-    "totalAmount": "$3,643.80",
+    "totalAmount": "3,643.80",
     "email": "hudsonbanks@cuizine.com",
     "address": {
       "street": "Downing Street",
@@ -584,7 +584,7 @@
     "username": "queen",
     "accountCode": "CHAS2768686586543500",
     "branchName": "Sena",
-    "totalAmount": "$3,079.02",
+    "totalAmount": "3,079.02",
     "email": "queensolis@cuizine.com",
     "address": {
       "street": "Minna Street",
@@ -608,7 +608,7 @@
     "username": "betsy",
     "accountCode": "CHAS2487253869309044",
     "branchName": "Gerber",
-    "totalAmount": "$2,771.11",
+    "totalAmount": "2,771.11",
     "email": "betsyfinley@cuizine.com",
     "address": {
       "street": "Putnam Avenue",
@@ -632,7 +632,7 @@
     "username": "merrill",
     "accountCode": "CHAS2509231860803327",
     "branchName": "Finderne",
-    "totalAmount": "$3,529.71",
+    "totalAmount": "3,529.71",
     "email": "merrillmarks@cuizine.com",
     "address": {
       "street": "Henry Street",
@@ -656,7 +656,7 @@
     "username": "sanchez",
     "accountCode": "CHAS3372488455668192",
     "branchName": "Waterloo",
-    "totalAmount": "$1,730.77",
+    "totalAmount": "1,730.77",
     "email": "sanchezestes@cuizine.com",
     "address": {
       "street": "Kingston Avenue",
@@ -680,7 +680,7 @@
     "username": "chambers",
     "accountCode": "CHAS3595828716604169",
     "branchName": "Rodman",
-    "totalAmount": "$2,743.54",
+    "totalAmount": "2,743.54",
     "email": "chambersgaines@cuizine.com",
     "address": {
       "street": "Midwood Street",
@@ -704,7 +704,7 @@
     "username": "kay",
     "accountCode": "CHAS2033046598775004",
     "branchName": "Detroit",
-    "totalAmount": "$1,516.26",
+    "totalAmount": "1,516.26",
     "email": "kayglass@cuizine.com",
     "address": {
       "street": "Barbey Street",
@@ -728,7 +728,7 @@
     "username": "bowers",
     "accountCode": "CHAS3082685328373742",
     "branchName": "Lupton",
-    "totalAmount": "$2,451.06",
+    "totalAmount": "2,451.06",
     "email": "bowersholmes@cuizine.com",
     "address": {
       "street": "Bowery Street",
@@ -752,7 +752,7 @@
     "username": "dejesus",
     "accountCode": "CHAS2830056721222602",
     "branchName": "Carrizo",
-    "totalAmount": "$1,114.41",
+    "totalAmount": "1,114.41",
     "email": "dejesussheppard@cuizine.com",
     "address": {
       "street": "Fairview Place",
@@ -776,7 +776,7 @@
     "username": "jenkins",
     "accountCode": "CHAS2363939696865811",
     "branchName": "Harrison",
-    "totalAmount": "$3,848.66",
+    "totalAmount": "3,848.66",
     "email": "jenkinsgoff@cuizine.com",
     "address": {
       "street": "Lake Street",
@@ -800,7 +800,7 @@
     "username": "stella",
     "accountCode": "CHAS3118169003802656",
     "branchName": "Fairhaven",
-    "totalAmount": "$2,361.36",
+    "totalAmount": "2,361.36",
     "email": "stellaharrell@cuizine.com",
     "address": {
       "street": "Willmohr Street",
@@ -824,7 +824,7 @@
     "username": "joni",
     "accountCode": "CHAS3991161051045882",
     "branchName": "Fresno",
-    "totalAmount": "$2,687.18",
+    "totalAmount": "2,687.18",
     "email": "jonifoster@cuizine.com",
     "address": {
       "street": "Bristol Street",
@@ -848,7 +848,7 @@
     "username": "elise",
     "accountCode": "CHAS2456357204125896",
     "branchName": "Cumberland",
-    "totalAmount": "$3,150.99",
+    "totalAmount": "3,150.99",
     "email": "eliseballard@cuizine.com",
     "address": {
       "street": "Richardson Street",
@@ -872,7 +872,7 @@
     "username": "pittman",
     "accountCode": "CHAS3002827448781308",
     "branchName": "Zarephath",
-    "totalAmount": "$3,701.89",
+    "totalAmount": "3,701.89",
     "email": "pittmandoyle@cuizine.com",
     "address": {
       "street": "Locust Street",
@@ -896,7 +896,7 @@
     "username": "sylvia",
     "accountCode": "CHAS3153243618259837",
     "branchName": "Calvary",
-    "totalAmount": "$1,512.27",
+    "totalAmount": "1,512.27",
     "email": "sylviaevans@cuizine.com",
     "address": {
       "street": "Chapel Street",
@@ -920,7 +920,7 @@
     "username": "jenny",
     "accountCode": "CHAS3456977130640837",
     "branchName": "Odessa",
-    "totalAmount": "$1,400.58",
+    "totalAmount": "1,400.58",
     "email": "jennybarrett@cuizine.com",
     "address": {
       "street": "Bowne Street",
@@ -944,7 +944,7 @@
     "username": "kenya",
     "accountCode": "CHAS3903324689772698",
     "branchName": "Hall",
-    "totalAmount": "$1,210.85",
+    "totalAmount": "1,210.85",
     "email": "kenyapayne@cuizine.com",
     "address": {
       "street": "Cozine Avenue",

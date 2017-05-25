@@ -3,7 +3,7 @@ var data1=[];
 var dataToBedisplayed=[];
 var queryString = {};
 var addUserQueryString = {};
-// var baseUrl="http://localhost:8080/";
+ //var baseUrl="http://localhost:8080/";
 var baseUrl="https://capstone-node.herokuapp.com/";
 var baseReferenceDistinctUrl=baseUrl+"distinct?distinct=";
 var baseUserUrl=baseUrl+"users/";
@@ -23,7 +23,11 @@ $("#showResult").tabulator({
             columns:[ //Define Table Columns
 
             ///{title:"Gender", field:"<input type='checkbox' name='vehicle' value='Bike'>", editable:true},
-            {title:"AccountID", field:"accountCode", sorter:"number", align:"left",headerFilter:true },
+            {title:"ID",
+            
+             columns:[   {title:"AccountID",field:"accountCode", sorter:"number", align:"left",headerFilter:true},
+             ],
+              },
               {//create column group
                 
             title:"Personal Info",
@@ -43,7 +47,7 @@ $("#showResult").tabulator({
         {title:"AccountType", field:"acttype", sorter:"string",headerFilter:true },        
         {title:"BranchName", field:"branchName", sorter:"string",headerFilter:true },        
         {title:"AccountOpenDate", field:"actopendate", sorter:"date",headerFilter:true },
-        {title:"Balance", field:"totalAmount", sorter:"string",headerFilter:true,formatter:"money",editable:true}
+        {title:"Balance($)", field:"totalAmount", sorter:"string",headerFilter:true,editable:true}
            ],
         }
     ],
@@ -66,7 +70,7 @@ $("#showResult").tabulator({
         cell.addClass('cellEdited');
         $("#save-row").addClass('show1');
        // alert("id is **"+id+"field is **"+field+"value **"+value+"oldValue **"+oldValue);
-        alert("data is **"+JSON.stringify(data)+"row **"+JSON.stringify(row));
+        //alert("data is **"+JSON.stringify(data)+"row **"+JSON.stringify(row));
 
     },
 });
@@ -213,6 +217,7 @@ $.ajax({
                    // <---update this
     success: function(result) {
     handleSuccessfulDeleteEvent(id);
+    //alert("Are you sure to delete the row??  ");
 },
     error: function(result){alert("Deleted Error  ")}
 });
@@ -379,9 +384,11 @@ function handleAddUser()
 
     }
    // addUserQueryString ["ssn"] = 12345;
-
+alert("accOpenDate is"+accOpenDate);
         if(accOpenDate != undefined && accOpenDate != null && accOpenDate.length > 0)
+        {alert("accOpenDate is inside "+accOpenDate);
         addUserQueryString ["accOpenDate"] = accOpenDate;
+    }
       if(acttype != "SelectAccountType" && acttype != null && acttype.length > 0)
         addUserQueryString ["acttype"] = acttype;
  
