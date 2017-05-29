@@ -272,7 +272,7 @@ display:block !important;
         body { 
             padding: 0; 
             margin: 0; 
-            width: 320px; 
+            width: 320px !important; 
             margin-right: 0;
 
         }
@@ -287,7 +287,7 @@ display:block !important;
     /* iPads (portrait and landscape) ----------- */
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
         body { 
-            width: 495px; 
+            width: 495px !important; 
         }
            .tabulator-cell { 
 
