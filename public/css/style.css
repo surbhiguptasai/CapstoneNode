@@ -253,17 +253,17 @@ display:block !important;
 
 
 
-    .tabulator-cell:nth-of-type(1):before { content: "AccountId" !important;margin-right:40px !important; }
-    .tabulator-cell:nth-of-type(2):before { content: "Name" !important; margin-right:40px !important;}
-    .tabulator-cell:nth-of-type(3):before { content: "Gender" !important; margin-right:40px !important;}
-    .tabulator-cell:nth-of-type(4):before { content: "Email" !important; margin-right:40px !important;}
-  .tabulator-cell:nth-of-type(5):before { content: "City" !important; margin-right:40px !important;}
-    .tabulator-cell:nth-of-type(6):before { content: "Phone" !important; margin-right:40px !important;}
-    .tabulator-cell:nth-of-type(7):before { content: "SSN" !important;margin-right:40px !important; }
-    .tabulator-cell:nth-of-type(8):before { content: "AccountType" !important;margin-right:40px !important; }
-    .tabulator-cell:nth-of-type(9):before { content: "BranchName" !important; margin-right:40px !important;}
-    .tabulator-cell:nth-of-type(10):before { content: "AccountOpenDate" !important; margin-right:40px !important;}
-    .tabulator-cell:nth-of-type(11):before { content: "Balance" !important; margin-right:40px !important;}
+    .tabulator-cell:nth-of-type(1):before { content: "AccountId" !important; }
+    .tabulator-cell:nth-of-type(2):before { content: "Name" !important; }
+    .tabulator-cell:nth-of-type(3):before { content: "Gender" !important; }
+    .tabulator-cell:nth-of-type(4):before { content: "Email" !important; }
+  .tabulator-cell:nth-of-type(5):before { content: "City" !important; }
+    .tabulator-cell:nth-of-type(6):before { content: "Phone" !important; }
+    .tabulator-cell:nth-of-type(7):before { content: "SSN" !important; }
+    .tabulator-cell:nth-of-type(8):before { content: "AccountType" !important; }
+    .tabulator-cell:nth-of-type(9):before { content: "BranchName" !important; }
+    .tabulator-cell:nth-of-type(10):before { content: "AccountOpenDate" !important; }
+    .tabulator-cell:nth-of-type(11):before { content: "Balance" !important; }
 
 
     @media only screen
@@ -272,7 +272,16 @@ display:block !important;
         body { 
             padding: 0; 
             margin: 0; 
-            width: 320px; }
+            width: 320px; 
+            margin-right: 0;
+
+        }
+        .tabulator-cell { 
+
+            /*width:100% !important;*/
+
+            padding-left: 42% !important; 
+    }
         }
     
     /* iPads (portrait and landscape) ----------- */
@@ -280,5 +289,11 @@ display:block !important;
         body { 
             width: 495px; 
         }
+           .tabulator-cell { 
+
+            /*width:100% !important;*/
+
+            padding-left: 50% !important; 
+    }
     }
 }
