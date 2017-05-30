@@ -204,7 +204,7 @@ app.put('/users/:id', (req, res) => {
   // if the user sent over any of the updatableFields, we udpate those values
   // in document
   const toUpdate = {};
-  const updateableFields = ['acttype', 'ssn','totalAmount'];
+  const updateableFields = ['totalAmount'];
 
   updateableFields.forEach(field => {
     if (field in req.body) {
