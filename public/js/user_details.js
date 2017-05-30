@@ -3,7 +3,7 @@ var data1=[];
 var dataToBedisplayed=[];
 var queryString = {};
 var addUserQueryString = {};  
- //var baseUrl="http://localhost:8080/";
+//var baseUrl="http://localhost:8080/";
 var baseUrl="https://capstone-node.herokuapp.com/";
 var baseReferenceDistinctUrl=baseUrl+"distinct?distinct=";
 var baseUserUrl=baseUrl+"users/";
