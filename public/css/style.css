@@ -19,6 +19,9 @@
 
 
 }
+.header1{
+       background-image: url("../img/headerBG.jpg");
+}
 .show #add-row,.show #delete-row{
 	visibility: visible;
 
@@ -38,18 +41,28 @@
 	}
 #logoImg {
 	/*background-image:url("img/logo3.jpg");*/
-	height:100px;
-	width:100px;
+	/*height:100px;
+	width:100px;*/
 	/*margin:auto;*/
-	float:right;
+	/*float:right;*/
 	background-repeat:no-repeat;
+    
+    padding-left:1px;
+        padding-right:1px;
+        
+         float: right;
+
 }
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    }
 #userSubmit{
-	background-color: blue;
+	/*background-color: blue;
 	color:white;
-	width:150px;
+	width:auto;
 	height:50px;
-	margin-bottom: 20px;
+	margin-bottom: 20px;*/
 	
 }
 .cellEdited{
@@ -63,10 +76,12 @@ body{
 #form-{
 	
 }
-h1,h2{
+h1,h6{
 	text-align: center;
-	color: blue;
+	color: whitesmoke;
 }
+
+
 .form-inline{
 	margin-top: 50px; 
 	margin-bottom: 20px;
@@ -76,12 +91,35 @@ h1,h2{
 	text-align: left;
 
 }
+.form-group
+{
+    padding-left: 40px;
+
+}
+.form-horizontal{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px; 
+    margin-bottom: 20px;
+    clear: both;
+    border-style: double;
+    padding: 30px;
+    text-align: left;
+
+
+}
+.nav
+{
+    clear:both;
+}
 
 input,select,label{
-	height:35px;
+	/*height:35px;
 	width:150px;
-	text-align: left;
+	text-align: left;*/
 	/*margin: 5px;*/
+    padding-left:20px;
+    padding-right:20px;
 }
 .labelClass
 {
@@ -114,12 +152,13 @@ input,select,label{
     font: italic;
 }*/
 button{
-	 display: inline-block;
+	/* display: inline-block;
 	 margin: auto;
     margin-top: 20px;
 
     width: 40%;
-    margin-bottom: 10px;
+    margin-bottom: 10px;*/
+        margin: auto;
 }
 .search{
 	font-weight:bold;
@@ -132,11 +171,11 @@ button{
 	visibility: hidden;
 }
 #delete-row,#save-row,#add-row{
-	height: 30px;
+	/*height: 30px;
 	width: 150px;
 	background-color: blue;
 	margin-bottom: 0;
-	color: white;
+	color: white;*/
 	
 }
 
@@ -174,6 +213,9 @@ modal-content input[type=text] {
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
+.form1{
+    margin-top: 5px;
+}
 #fieldset{
     display: inline-block;
     margin: 5px;
@@ -208,9 +250,17 @@ modal-content input[type=text] {
         font-weight: bold;
     /* border-bottom: 1px solid #e5e5e5; */}
 @media 
-    only screen and (max-width: 760px),
-    (min-device-width: 768px) and (max-device-width: 1024px)
+    only screen and (max-width: 760px)
     {
+
+
+
+  .btn-responsive {
+    padding:2px 4px;
+    font-size:80%;
+    line-height: 1;
+    border-radius:3px;
+  }
 .tabulator,.tabulator-tableHolder,.tabulator-table,.tabulator-row,.tabulator-cell
 {
 display:block !important;
@@ -262,13 +312,23 @@ display:block !important;
     .tabulator-cell:nth-of-type(7):before { content: "SSN" !important; }
     .tabulator-cell:nth-of-type(8):before { content: "AccountType" !important; }
     .tabulator-cell:nth-of-type(9):before { content: "BranchName" !important; }
-    .tabulator-cell:nth-of-type(10):before { content: "AccountOpenDate" !important; }
+    .tabulator-cell:nth-of-type(10):before { content: "AccOpenDate" !important; }
     .tabulator-cell:nth-of-type(11):before { content: "Balance" !important; }
 
 
     @media only screen
     and (min-device-width : 320px)
     and (max-device-width : 480px) {
+        .results
+        {
+            padding-right: 0px !important;
+            padding-left:0px !important;
+        }
+        .col-md-1 {width: 25%;}
+        .download
+        {
+          width:10%;
+        }
         body { 
             padding: 0; 
             margin: 0; 
@@ -276,24 +336,87 @@ display:block !important;
             margin-right: 0;
 
         }
+    #header {
+        position: relative;
+    }
+    #logoImg img {
+
+        width: 80%;
+      /*  padding-left:1px;
+        padding-right:1px;*/*/
+        margin-top: 2px;
+    }
+
+        .search{
+   
+    font-size: 12px;
+
+}
+        h1{
+            font-size: 20px;
+        }
+        h6{
+            font-size: 10px;
+        }
         .tabulator-cell { 
 
-            /*width:100% !important;*/
+            width:200px !important;
+            
 
             padding-left: 42% !important; 
     }
+    .tabulator{
+        table-layout: fixed !important;
         }
+    }
     
     /* iPads (portrait and landscape) ----------- */
-    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+ /*   @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+        .col-md-1 {width: 25%;}
         body { 
             width: 495px !important; 
         }
+         h1{
+            font-size: 24px;
+        }
+        h6{
+            font-size: 8px;
+        }
            .tabulator-cell { 
-
-            /*width:100% !important;*/
 
             padding-left: 50% !important; 
     }
-    }
+    }*/
 }
+@media 
+    only screen and (min-width: 760px)
+  
+    {
+        #logoImg{
+            margin:10px;
+
+         
+        }
+          .btn-responsive {
+    padding:4px 9px;
+    font-size:90%;
+    line-height: 1.2;
+  }
+        }
+
+
+        @media 
+    only screen and (min-width: 1024px)
+  
+    {
+       
+          .btn-responsive {
+    padding:4px 9px;
+    font-size:120%;
+    line-height: 1.2;
+  }
+        }
+
+
+
+
