@@ -313,7 +313,7 @@ display:block !important;
     .tabulator-cell:nth-of-type(8):before { content: "AccountType" !important; }
     .tabulator-cell:nth-of-type(9):before { content: "BranchName" !important; }
     .tabulator-cell:nth-of-type(10):before { content: "AccOpenDate" !important; }
-    .tabulator-cell:nth-of-type(11):before { content: "Balance" !important; }
+    .tabulator-cell:nth-of-type(11):before { content: "Balance ($)" !important; }
 
 
     @media only screen
@@ -361,6 +361,7 @@ display:block !important;
         .tabulator-cell { 
 
             width:200px !important;
+            height:auto !important;
             
 
             padding-left: 42% !important; 
