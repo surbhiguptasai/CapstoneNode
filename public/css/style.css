@@ -19,6 +19,9 @@
 
 
 }
+.form2btn{
+    margin:20px;
+}
 .header1{
        background-image: url("../img/headerBG.jpg");
 }
@@ -80,7 +83,11 @@ h1,h6{
 	text-align: center;
 	color: whitesmoke;
 }
-
+ .form2h1{
+    text-align: center;
+    color: blue;
+    margin-bottom: 10px;
+}
 
 .form-inline{
 	margin-top: 50px; 
@@ -123,24 +130,24 @@ input,select,label{
 }
 .labelClass
 {
-	display: inline-block;
+	/*display: inline-block;
     max-width: 40%;
-    /* margin: 0px; */
+     margin: 0px; 
     font-weight: bold;
     padding: 10px;
     font: italic;
     text-align: left;
     margin:5px;
-    font-size: 16px;
+    font-size: 16px;*/
 }
 .inputclass{
 	
-    height: 45px;
+   /* height: 45px;
     width: 300px;
     text-align: left;
     margin: 5px;
     font: italic;
-    font-style: italic;
+    font-style: italic;*/
 
 }
 /*#fieldset label {
@@ -181,37 +188,13 @@ button{
 
 
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    padding-top: 60px;
-}
+    overflow: auto;
 
+}
 .modal-content {
-    background-color: #fefefe;
-    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-    border: 1px solid #888;
-    text-align: center;
-    height: auto;
-    width: auto;
     background-image: url("../img/bankBG5.jpg");
-    width: 80%; /* Could be more or less, depending on screen size */
-}
-
-modal-content input[type=text] {
-    width: 50%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
+        width: 50%;
+    margin-left: 25%;
 }
 .form1{
     margin-top: 5px;
@@ -252,9 +235,24 @@ modal-content input[type=text] {
 @media 
     only screen and (max-width: 760px)
     {
-
-
-
+        .form2btn {
+            margin: 0px;
+        margin-right: 25%;
+}
+        b{
+            font-weight: 400;
+        }
+h1{
+    font-size: 15px;
+}
+.form-group{
+    padding-left: 0px;
+}
+.modal-content {
+    background-image: url("../img/bankBG5.jpg");
+        width: 100%;
+    margin-left: 0%;
+}
   .btn-responsive {
     padding:2px 4px;
     font-size:80%;
