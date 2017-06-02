@@ -109,7 +109,7 @@ h1,h6{
     margin-top: 5px; 
     margin-bottom: 20px;
     clear: both;
-    border-style: double;
+    /*border-style: double;*/
     padding: 30px;
     text-align: left;
 
